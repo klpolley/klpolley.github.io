@@ -1,45 +1,62 @@
 /*
 Theme Name: Free-Portfolio-HTML5-Responsive-Website-Sam
 Author URI: http://webthemez.com/ 
+Edited by Kate Polley
 */
+
+:root {
+    --violet: #180E38;
+    --fire: #FE5E6B;
+    --blush: #F2E4E7;
+    --rose: #A24F68;
+    --indie: #5D5873 
+}
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 * {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 }
+
 body {
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background: #fff;
 }
+
 ::selection {
 	color: #fff;
-	background: #5887FF;
+	background: var(--fire);
 }
 
 ::-moz-selection {
  color: #fff;
- background: #5887FF;
+ background: var(--fire);
 }
+
 p {
 	color: #858585;
 	line-height: 22px;
 	font-size: 15px;
 }
+
 .white {
 	background: #fff;
 }
+
 .pDark p {
-	color: #6D6D6D;
+	color: var(--indie);
 }
 .pDark h3 {
-	color: #BEBEBE;
+	color: var(--indie);
 }
+
 .btn, .form-control, .team-socials i {
 	border-radius: 0px !important;
 }
+
 .button-outline {
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -57,8 +74,9 @@ p {
 	color: #fff;
 	background: rgba(255,255,255,0.35);
 }
+
 a {
-	color: #5887FF;
+	color: var(--rose);
 	text-decoration: none;
 	text-shadow: none;
 	-webkit-transition: all 0.2s linear;
@@ -68,28 +86,32 @@ a {
 	transition: all 0.2s linear;
 }
 a:hover {
-	color: #DF3927;
+	color: var(--fire);
 	text-decoration: none;
 }
+
 .btn {
 	border: 0px;
 	border-radius: 0px;
 }
 .btn:hover {
-	background: #DF6B00;
+	background: var(--fire);
 }
 .btn-primary {
-	background: #5887FF;
+	background: var(--violet);
 }
+
 .form-control {
 	border-radius: 0px;
 }
+
 .mrgn30 {
 	margin: 30px 0;
 }
+
 .copyright {
 	color: #6D6D6D;
-	background: #000;
+	background: var(--violet);
 	padding: 20px 0;
 	line-height: 34px;
 }
@@ -101,7 +123,7 @@ a:hover {
 	bottom: 20px;
 	right: 20px;
 	z-index: 5;
-	background: #5887FF;
+	background: var(--fire);
 }
 .topHome .fa-2x {
 	font-size: 20px;
@@ -112,31 +134,30 @@ h2 {
 	font-size: 40px;
 	margin: 0;
 	padding-bottom: 16px;
-	font-variant: small-caps;
 }
 /* Header 
 ----------------------------------------------*/
 .header {
 	position: fixed;
 	width: 100%;
-	background: transpreant;
+	background: transparent;
 	z-index: 50;
 	border-radius: 0;
 	top: 0px;
 }
 .navbar-inverse .navbar-toggle {
-	border-color: #5887FF;
-	background-color: #5887FF;
+	border-color: var(--fire);
+	background-color: var(--fire);
 }
 .header .navbar {
 	margin: 0;
 	background: transparent !important;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-/*background-color: #5887FF;*/;
+/*background-color: var(--fire);*/;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-	background: #5887FF;
+	background: var(--fire);
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
 	color: #fff;
@@ -151,13 +172,13 @@ h2 {
 	color: #FFFFFF;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-	color: #5887FF;
+	color: var(--fire);
 	background: none;
 }
 .navbar-toggle {
 }
 .addBg {
-background: #000 !important;
+background: var(--violet) !important;
 -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
@@ -165,7 +186,7 @@ box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 /*.carousel-inner*/
 #myCarousel {
 	margin-top: 50px;
-	border-bottom: 4px solid #5887FF;
+	border-bottom: 4px solid var(--fire);
 }
 .carousel-inner > .item {
 }
@@ -192,13 +213,13 @@ box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 }
 .actionPanel {
 	padding: 25px 0;
-	background: #5887FF;
+	background: var(--fire);
 }
 .actionPanel h3 {
 	margin: 0px;
 }
 .circle {
-	background: #5887FF;
+	background: var(--fire);
 	height: 60px;
 	width: 60px;
 	border-radius: 35px;
@@ -211,7 +232,7 @@ box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 	padding: 16px 15px;
 	line-height: 18px;
 	height: 50px;
-	/*color:#5887FF;*/;
+	/*color:var(--fire);*/;
 }
 .navbar-brand b {
 	color: #fff;
@@ -242,7 +263,7 @@ box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 	color: #fff;
 	background: none;
-	border-bottom:2px solid #5887FF;
+	border-bottom:2px solid var(--fire);
 	border-radius: 0px;
 }
 .navbar-nav > li:hover > a {
@@ -279,7 +300,7 @@ box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.38);
 	background: rgb(44, 44, 44);
 }
 .darkBg .fa {
-	color: #5887FF;
+	color: var(--fire);
 }
 /*--- Banner ----*/
 .banner-container {
@@ -342,12 +363,12 @@ margin:0 6px;
 font-size:26px;
 }
 .banner-content .social-icons a:hover {
-background:#5887FF;
+background:var(--fire);
 color:#fff;
-border: 1px solid #5887FF;
+border: 1px solid var(--fire);
 }
 .banner-content .hireMe:hover{
-background:#5887FF;
+background:var(--fire);
 color:#fff;
 }
 .banner-content .hireMe{
@@ -456,13 +477,12 @@ float: none;
 /*Intro Content*/
 #introText {
 	padding: 50px 0;
-	background: #000;
+	background: var(--violet);
 }
 #introText h1 {
 	font-size: 40px;
 	margin: 0;
 	padding-bottom: 16px;
-	font-variant: small-caps;
 	color: #fff;
 }
 #introText p {
@@ -473,22 +493,21 @@ float: none;
 padding:60px 0;	
 	}
 #aboutUs .txtHead {
-	background: #fff;
-	padding: 20px 10px;
+	padding: 20px 20px;
+    color: #fff;
 }
 #aboutUs .txtHead .fa {
 	font-size: 58px;
-	color: #5E5E5E;
 }
 .tileBox img{
 overflow:hidden;
 border-radius:120px;
 width:300px;
-box-shadow: 12px 0px 0px 12px rgba(13, 113, 165, 0.2), -12px 0px 0px 12px rgba(109, 139, 232, 0.2);
+box-shadow: 12px 0px 0px 12px rgba(254,94,107,.5), -12px 0px 0px 12px rgba(24,14,56,.5);
 }
 .tileBox p { 
 	font-size: 15px;
-	color: #777777;
+	color: #eee;
 	padding: 20px;
 	margin: 0px;
 }
@@ -578,7 +597,7 @@ min-height:200px;
 }
 /*Experience*/
 #experience{
-	background: #F8F8F8;
+	background: var(--blush);
 }
 .experience-details .col-md-6{
 	margin-bottom: 40px;
@@ -597,7 +616,7 @@ min-height:200px;
 }
 .experience-details .icon-block i {
 	font-size: 60px;
-	color: #5887FF;
+	color: var(--fire);
 	margin: 8px 0 0;
 }
 .experience-details span {
@@ -625,7 +644,7 @@ font-size: 1.2em;
 margin: 10px 0 !important;
 }
 .progress-bar {
-	background-color: #5887FF;
+	background-color: var(--fire);
 }
 /* Services
     -------------------------------------------------*/
@@ -665,7 +684,7 @@ margin: 10px 0 !important;
 .team-member .member-img img {
 	max-width: 250px;
 	margin: 0 auto;
-	border: 1px solid #5887FF;
+	border: 1px solid var(--fire);
 }
 .team-member h4 {
 	font-size: 19px;
@@ -723,7 +742,7 @@ margin: 10px 0 !important;
 	/*set next row on the baseline*/;
 }
 #portfolio p{
-color:#000;
+color:#fff;
 }
 nav#filter {
 	margin-bottom: 1.5em;
@@ -740,7 +759,7 @@ nav#filter a {
 	color:#737373;
 }
 a.current {
-	color: #5887FF !important; 
+	color: var(--fire) !important; 
 }
 .portfolio-items article img {
 	width: 100%;
@@ -818,8 +837,8 @@ a.current {
 	font-weight: 200;
 }
 .btn-dark {
-	background: #444;
-	color: #fff;
+	background: var(--fire);
+	color: var(--violet);
 }
 .btn-dark:hover {
 	background: #000;
@@ -845,6 +864,7 @@ hr {
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
+    background-color: var(--indie)
 }
 #navigation {
 	position: fixed;
@@ -871,7 +891,7 @@ body {
 	transition: all 400ms;
 }
 #navigation > li > a.current,  #navigation > li:hover > a {
-	background: #999999;
+	background: var(--violet);
 }
 .pageSection {
 	min-height: 600px;
@@ -889,10 +909,10 @@ body {
 footer {
 	border-top: 1px solid #e5e5e5;
 	padding: 45px 0;
-	background: #fff;
+	background: var(--violet);
 }
 .social a:hover {
-	color: #5887FF;
+	color: var(--fire);
 }
 .social a {
 	font-size: 23px;
@@ -926,17 +946,17 @@ footer {
 	margin: 0px 5px;
 }
 #portfolio{
-background: #DBDBDB;	
+background: var(--rose);	
 	}
 #contactUs{
-	 background: #3394D5;
+	 background: var(--blush);
 }
 #contactUs p{
 color:#000;
 }
 #contactUs .btn{
 background: #fff;
-color: #5887FF;
+color: var(--fire);
 }
 #contactUs .btn:hover{
 color: #000;
@@ -1041,7 +1061,7 @@ display: inline-block;
 padding:0px;
 }
 .header #mainNav{
-background:#000 !important;
+background:var(--violet) !important;
 padding:0px 15px;
 }
 .heroText {
