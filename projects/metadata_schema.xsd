@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="discipline">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ladies' Singles"></xs:enumeration>
+      <xs:enumeration value="Men's Singles"></xs:enumeration>
+      <xs:enumeration value="Pairs"></xs:enumeration>
+      <xs:enumeration value="Ice Dance"></xs:enumeration>
+      <xs:enumeration value="Solo Dance"></xs:enumeration>
+      <xs:enumeration value="Synchronized Skating"></xs:enumeration>
+      <xs:enumeration value="Showcase"></xs:enumeration>
+      <xs:enumeration value="Theatre on Ice"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="segment">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Short Program"></xs:enumeration>
+      <xs:enumeration value="Free Skate"></xs:enumeration>
+      <xs:enumeration value="Qualifying Free Skating"></xs:enumeration>
+      <xs:enumeration value="Rhythm Dance"></xs:enumeration>
+      <xs:enumeration value="Free Dance"></xs:enumeration>
+      <xs:enumeration value="Pattern Dance"></xs:enumeration>
+      <xs:enumeration value="Compulsory Dance"></xs:enumeration>
+      <xs:enumeration value="Original Dance"></xs:enumeration>
+      <xs:enumeration value="Combined Dance"></xs:enumeration>
+      <xs:enumeration value="Shadow Dance"></xs:enumeration>
+      <xs:enumeration value="Light Entertainment"></xs:enumeration>
+      <xs:enumeration value="Light Character Performance"></xs:enumeration>
+      <xs:enumeration value="Comedic Impressions"></xs:enumeration>
+      <xs:enumeration value="Lyrical Pop"></xs:enumeration>
+      <xs:enumeration value="Dramatic Entertainment"></xs:enumeration>
+      <xs:enumeration value="Dramatic Performance"></xs:enumeration>
+      <xs:enumeration value="Dramatic Character Performance"></xs:enumeration>
+      <xs:enumeration value="Interpretive"></xs:enumeration>
+      <xs:enumeration value="Choreographic Artistry"></xs:enumeration>
+      <xs:enumeration value="Duo-Trio"></xs:enumeration>
+      <xs:enumeration value="Ensembles"></xs:enumeration>
+      <xs:enumeration value="Mini-Production Ensembles"></xs:enumeration>
+      <xs:enumeration value="Parade of Champions"></xs:enumeration>
+      <xs:enumeration value="Choreographic Exercise"></xs:enumeration>
+      <xs:enumeration value="Free Program"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="level">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Championship"></xs:enumeration>
+      <xs:enumeration value="Senior"></xs:enumeration>
+      <xs:enumeration value="Junior"></xs:enumeration>
+      <xs:enumeration value="Novice"></xs:enumeration>
+      <xs:enumeration value="Intermediate"></xs:enumeration>
+      <xs:enumeration value="Juvenile"></xs:enumeration>
+      <xs:enumeration value="Open Juvenile"></xs:enumeration>
+      <xs:enumeration value="Pre-Juvenile"></xs:enumeration>
+      <xs:enumeration value="Preliminary"></xs:enumeration>
+      <xs:enumeration value="Pre-Preliminary"></xs:enumeration>
+      <xs:enumeration value="Young Adult"></xs:enumeration>
+      <xs:enumeration value="Open"></xs:enumeration>
+      <xs:enumeration value="International"></xs:enumeration>
+      <xs:enumeration value="Gold"></xs:enumeration>
+      <xs:enumeration value="Pre-Gold"></xs:enumeration>
+      <xs:enumeration value="Silver"></xs:enumeration>
+      <xs:enumeration value="Pre-Silver"></xs:enumeration>
+      <xs:enumeration value="Bronze"></xs:enumeration>
+      <xs:enumeration value="Pre-Bronze"></xs:enumeration>
+      <xs:enumeration value="Collegiate"></xs:enumeration>
+      <xs:enumeration value="Adaptive"></xs:enumeration>
+      <xs:enumeration value="Championship Masters"></xs:enumeration>
+      <xs:enumeration value="Championship Adult"></xs:enumeration>
+      <xs:enumeration value="Championship Masters Junior-Senior"></xs:enumeration>
+      <xs:enumeration value="Masters Junior-Senior"></xs:enumeration>
+      <xs:enumeration value="Championship Masters Intermediate-Novice"></xs:enumeration>
+      <xs:enumeration value="Masters Intermediate-Novice"></xs:enumeration>
+      <xs:enumeration value="Centennial"></xs:enumeration>
+      <xs:enumeration value="Masters"></xs:enumeration>
+      <xs:enumeration value="Adult"></xs:enumeration>
+      <xs:enumeration value="Adult/Masters Open"></xs:enumeration>
+      <xs:enumeration value="Championship Adult Gold"></xs:enumeration>
+      <xs:enumeration value="Adult Gold"></xs:enumeration>
+      <xs:enumeration value="Adult Pre-Gold"></xs:enumeration>
+      <xs:enumeration value="Championship Adult Silver"></xs:enumeration>
+      <xs:enumeration value="Adult Silver"></xs:enumeration>
+      <xs:enumeration value="Adult Pre-Silver"></xs:enumeration>
+      <xs:enumeration value="Adult Bronze"></xs:enumeration>
+      <xs:enumeration value="Adult Pre-Bronze"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="event">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="description" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="competition" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="competitors" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="panel" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="recording" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="date" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="discipline" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="segment" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="level" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ageCategory" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qualification" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="scoringSystem" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="results" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="scoreSheets" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date" type="xs:date"/>
+  <xs:element name="discipline" type="discipline"/>
+  <xs:element name="segment">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="segment">
+          <xs:attribute name="medal" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="individual"></xs:enumeration>
+                <xs:enumeration value="combined"></xs:enumeration>
+              </xs:restriction>     
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="level" type="level"/>
+  <xs:element name="ageCategory" type="xs:string"/>
+  <xs:element name="qualification">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="rank" use="optional" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scoringSystem" type="xs:string"/>
+  <xs:element name="results" type="xs:anyURI"/>
+  <xs:element name="scoreSheets" type="xs:anyURI"/>
+  <xs:element name="competition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="series" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="startDate" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="endDate" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="location" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="venue" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="series" type="xs:string"/>
+  <xs:element name="startDate" type="xs:date"/>
+  <xs:element name="endDate" type="xs:date"/>
+  <xs:element name="location">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="source" use="optional" type="xs:string"/>
+          <xs:attribute name="sourceID" use="optional" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="venue">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="rink" use="optional" type="xs:string"/>
+          <xs:attribute name="host" use="optional" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="competitors">
+    <xs:complexType>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <xs:element ref="athlete"/>
+        <xs:element ref="team"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="team">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="athlete" minOccurs="2" maxOccurs="2"/>
+          <xs:element ref="bio" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="club" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="federation" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="bio" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="club" minOccurs="0" maxOccurs="1"/>
+          <xs:element ref="federation" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="panel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="official" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="official">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="role" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="represents" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="role" type="xs:string"/>
+  <xs:element name="represents" type="xs:string"/>
+  <xs:element name="recording">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="host" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="title" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="url" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="uploadDate" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="duration" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="language" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="host">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="access" use="required" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="url" type="xs:anyURI"/>
+  <xs:element name="uploadDate" type="xs:date"/>
+  <xs:element name="duration" type="xs:string"/>
+  <xs:element name="language" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="athlete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="bio" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="club" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="federation" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bio">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+          <xs:attribute name="source" use="optional" type="xs:string"/>
+          <xs:attribute name="sourceID" use="optional" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="club" type="xs:string"/>
+  <xs:element name="federation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="isucode" use="required" type="xs:string"/>
+          <xs:attribute name="source" use="optional" type="xs:string"/>
+          <xs:attribute name="sourceID" use="optional" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
